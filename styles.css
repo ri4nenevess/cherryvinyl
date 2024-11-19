@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #687a8f;
+} 
+
+.header {
+    width: 100%;
+    background-color: #a31230;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 15px 0;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.banner {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.bannerimg {
+    width: 100%;
+    height: 300px;
+    display: block;
+}
+
+.title {
+    font-family: 'Cursive', sans-serif;
+    font-size: 24px;
+    color: white;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.vinyl-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.vinyl-item {
+    background: rgb(219, 218, 218);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.vinyl-item:hover {
+    transform: translateY(-10px);
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.buy-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #a31230;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.image-wrapper:hover .buy-button {
+    opacity: 1;
+}
+
+.image-wrapper:hover img {
+    opacity: 0.5;
+}
+
+.vinyl-item p {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.price {
+    color: #a31230;
+    font-weight: bold;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.badge.sold {
+    background-color: black;
+}
+
+.badge.discount {
+    background-color: #e67e22;
+}
+
+.footer {
+    background-color: #a31230;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    gap: 40px;
+}
+
+.footer-icons img {
+    height: 60px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .banner .title {
+        font-size: 20px;
+    }
+
+    .vinyl-item {
+        padding: 10px 5px;
+    }
+}
